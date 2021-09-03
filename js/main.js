@@ -1,0 +1,4 @@
+function animateTextOnScroll() {
+funFactsAnimation();
+houstonWeHaveALiftOff();
+}

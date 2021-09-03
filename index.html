@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Podižeš mi tlak na 202 - Microlife Hrvatska</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+</head>
+<body onload="animateTextOnScroll()">
+
+  <div class="section hero" id="hero">
+    <div class="container u-max-full-width">
+<div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container-general">
+            <div class="gallery-wrap wrap-effect-1">
+              <div class="swiper-item"></div>
+              <div class="swiper-item"></div>
+              <div class="swiper-item"></div>
+              <div class="swiper-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+  </div>
+
+  <div class="section intro get-over-here" id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h4 class="hero-heading text-left">Riješite kviz i saznajte koji proizvodi su za vas!</h4>
+          <button class="button button-primary" onclick="startQuiz()">Započnite</button>
+        </div>
+        <div class="one-half column">
+          <img class="img" src="img/2846-BP-B3-AFIB_front_cuff_f.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="fun-facts" class="fun-facts">
+    <div class="fullscreen-video-bg">
+      <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-video-bg__video">
+          <source src="img/heartbeat.mp4" type="video/mp4">
+      </video>
+  </div>
+          <h1 class="hero-heading">Fun facts</h1>
+    <ul>
+      <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Znate li koje je optimalno vrijeme za mjerenje krvnog tlaka?</h5>
+          <p class="fun-fact-description">Preporuka za mjerenje krvnog tlaka je ujutro, između 6h i 9h sati i navečer, između 18h i 21h.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Koji je najčešći oblik srčane aritmije?</h5>
+          <p class="fun-fact-description">Atrijska fibrilacija je najčešći oblik srčane aritmije i povećava rizik od moždanog udara<sup>1</sup>.<br>
+            <small><sup>1</sup> Camm AJ, Kirchof P, Lip G, Schotten U, Savelieva I, Ernst S. et al. Guidelines for the management of atrial fibrilation: The Task force for the Management of Atrial Fibrilationof the European Society of Cardiology (ESC). European Heart Journal. 2010;31(19).</small>
+            </p>
+        </div>
+      </li>
+          <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Tko je "tihi ubojica" kojeg se svi moramo čuvati?</h5>
+          <p class="fun-fact-description">Arterijska hipertenzija ili visoki krvni tlak, naziva se  i "tihim ubojicom" jer, ako se ne dijagnosticira i ne liječi na vrijeme, može dovesti do oštećenja niza organa<sup>1</sup>.<br>
+            <small><sup>1</sup> https://www.zzjzdnz.hr/zdravlje/kardiovaskularno-zdravlje/poviseni-krvni-tlak-tihi-ubojica</small>
+            </p>
+        </div>
+      </li>
+          <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Jeste li čuli za efekt "bijele kute"?</h5>
+          <p class="fun-fact-description">Efekt "bijele kute" predstavlja pojavu povišene vrijednosti arterijskog tlaka prilikom mjerenja u liječničkoj ordinaciji u odnosu na mjerenja kod kuće.</p>
+        </div>
+      </li>
+  
+      <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Znate li koji je vodeći uzrok smrti na svijetu?</h5>
+          <p class="fun-fact-description">Kardiovaskularne bolesti su vodeći uzrok smrti na svijetu, od kojih godišnje umre čak 17,3 milijuna ljudi, odnosno 30% svih umrlih<sup>1</sup>.<br>
+            <small><sup>1</sup>	WHO-health for all, 2016. https://www.hzjz.hr/sluzba epidemiologija-prevencija-nezaraznih-bolesti/odjel-za-srcano-zilne-bolesti/</small>
+            </p>
+        </div>
+      </li>
+          <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Što je preeklampsija?</h5>
+          <p class="fun-fact-description">Preeklampsija se definira kao hipertenzija i proteinurija nakon 20 tjedana trudnoće. Zbog nepredvidive prirode preeklampsije, trudnice s hipertenzijom trebaju često mjeriti krvni tlak.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h5 class="fun-fact-heading">Koliki je preporučeni dnevni unos soli?</h5>
+          <p class="fun-fact-description">Prema Svjetskoj zdravstvenoj organizaciji (WHO) preporučeni dnevni unos je 5g/dan, a u Hrvatskoj se prosječno unosi 11,6 g/dan što je daleko od preporučenih vrijednosti. Smanjenje unosa soli za samo 10 posto moglo bi spasiti milijune ljudskih života, pokazalo je istraživanje čiji su rezultati objavljeni u British Medical Journalu (BMJ)<sup>1</sup>.
+          <small><sup>1</sup> Strazzullo P. et al. Salt intake, stroke, and cardiovascular disease: meta-analysis of prospective studies. BMJ 2009;339:b4567</small></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="section get-help" id="get-help">
+    <div class="container">
+      <h3 class="section-heading">Need help getting started?</h3>
+      <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
+      <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
+    </div>
+  </div>
+
+  <div class="section categories" id="categories">
+    <div class="container">
+      <h3 class="section-heading">Responsive Images</h3>
+      <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
+      <div class="row">
+        <div class="one-half column category">
+          <img class="u-max-full-width" src="img/974-OXY 300.png">
+        </div>
+        <div class="one-half column category">
+          <img class="u-max-full-width" src="img/1993-NC200_front.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-modal" id="quiz-modal">
+    <div class="close-btn" onclick="closeQuiz()">
+  <span></span>
+  <span></span>
+</div>
+<div id="quiz-app" class="quiz-background">
+<div class="status">
+  <span>{{ questions.length }} Questions, {{ answered > 0 ? answered + ' Answered,' : ''}} {{ questions.length - answered }} Remaining</span>
+</div>
+<div class="user-role">
+    <div class="question current">
+      <transition name="slide-fade" mode="out-in">
+        <div :key="questions[currentQuestion].question" :class="{'deactivate': answered == questions.length}">
+         <h2>{{ questions[currentQuestion].question }}</h2>
+         <div class="answers">
+           <span v-for="(answer, index) in questions[currentQuestion].answers" :key="index" v-bind:data-index="index" @click="selectAnswer">{{ answer }}</span>
+         </div>
+        </div>
+      </transition>
+       <div class="next-question">
+         <button class="next-btn" disabled>{{ currentQuestion < (questions.length -1) ? 'Next' : 'Result!' }}</button>      
+       </div>
+    </div>
+  
+  <div class="result">
+    <div class="success"></div>
+    <h2>You have successfully finished the quiz, and your score is:</h2>
+    <h1 :class="[(Number(((correctAnswers / questions.length) *100)).toFixed(2) >= 50) ? 'green' : 'red']">{{ Number(((correctAnswers / questions.length) *100)).toFixed(2) }}%</h1>
+    <small><b>{{ correctAnswers }}</b>Correct, <b>{{ wrongAnswers }}</b>Wrong</small>
+    <button class="close">close</button>
+    <button class="show-wrong-ones"
+            v-show="wrongAnswers > 0"
+            @click="showWrongQuestion = true">Wrong answers</button>
+  </div>
+</div>
+  
+ <div class="wrong-questions">
+   <h2 v-if="wrongQuestions.length > 1">Your wrong Questions</h2>
+   <h2 v-else-if="wrongQuestions.length == 1">Your wrong Question</h2>
+   <div class="wrong-one" v-for="question in wrongQuestions">
+     <h3>{{ question.question }}</h3>
+     <div class="answers-container">
+       <span class="selected">{{ question.answers[question.selected] }}</span>
+       <span class="correct">{{ question.answers[question.correct_answer] }}</span>
+     </div>
+   </div>
+   
+   <button id="return-to-result">Show my result</button>
+ </div>
+</div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/elements.js"></script>
+  <script src="/js/fun-facts.js"></script>
+  <script src="/js/little-helpers.js"></script>
+  <script src="/js/quiz-app.js"></script>
+
+</body>
+</html>
