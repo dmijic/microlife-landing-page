@@ -1,9 +1,5 @@
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-  border-radius: 100px;
-}
-
 img {
   max-width: 100%;
   width: auto;
@@ -55,7 +51,7 @@ img {
 #fun-facts .card {
   background-color: #fff;
   border-radius: 15px;
-  color: #444;
+  color: #53565a;
   padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -346,7 +342,7 @@ h1.main {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-250%);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: #fff;
   padding: 20px 40px;
   border-radius: 15px;
   overflow: hidden;
@@ -375,10 +371,11 @@ h1.main {
   min-width: calc(100% - 20px);
   max-width: calc(100% - 20px);
   background-color: transparent;
-  color: #fff;
+  color: #53565a;
   font-weight: 100;
   padding: 0;
   border-radius: 3px;
+  font-size: 3rem;
 }
 
 .question .answers {
@@ -389,8 +386,8 @@ h1.main {
 .question .answers span {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #094666;
   font-size: 2rem;
+  color: #53565a;
   margin: 5px 5px 0 0;
   padding: 20px 40px;
   border-radius: 5px;
@@ -398,11 +395,14 @@ h1.main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .question .answers span.selected {
   animation: select-answer 0.2s ease;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #094666;
 }
 
 @keyframes select-answer {
@@ -422,13 +422,21 @@ h1.main {
 
 .question .next-btn {
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: none;
   padding: 10px 25px;
   border-radius: 3px;
   font-size: 1em;
-  color: #094666;
+  color: #53565a;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+
+.question .next-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: #094666;
 }
 
 .question .next-btn:focus {

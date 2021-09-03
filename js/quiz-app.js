@@ -4,12 +4,11 @@ new Vue({
       return {
         questions: [
               {
-              question: 'Which company was established on April 1st, 1976 by Steve Jobs, Steve Wozniak and Ronald Wayne?',
+              question: 'Vaša dobna grupa',
               answers: [
-                  'Apple',
-                  'Microsoft',
-                  'Atari',
-                  'Commodore'
+                  '12-45 godina',
+                  '45-55 godina',
+                  '55-80+ godina'
               ],
               correct_answer: 0,
               selected: null,
