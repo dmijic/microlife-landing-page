@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Podižeš mi tlak na 202 - Microlife Hrvatska</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+</head>
+<body>
+
+  <div class="quiz-modal" id="quiz-modal" style="display: block;">
+
+<div id="quiz-app" class="quiz-background">
+<div class="user-role">
+    <div class="question current">
+      <transition name="slide-fade" mode="out-in">
+        <div :key="questions[currentQuestion].question" :class="{'deactivate': showGroup != 'next'}">
+         <h2>{{ questions[currentQuestion].question }}</h2>
+         <div class="answers" v-bind:style=" (questions[currentQuestion].answers.length === 3) ? 'grid-template-columns: 1fr 1fr 1fr;' : ' ' " >
+           <span v-for="(answer, index) in questions[currentQuestion].answers" :key="index" v-bind:data-index="index" @click="selectAnswer">{{ answer.text }}</span>
+         </div>
+        </div>
+      </transition>
+       <div class="next-question button-container">
+         <button class="next-btn button button-primary" disabled>{{ currentQuestion < (questions.length -1) ? 'Dalje' : 'Procijeniti' }}</button>      
+       </div>
+    </div>
+  
+  <div class="result">
+
+    <div class="outer">
+
+      <div class="button-container close">
+      <div class="close-btn">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    
+    <h1>Preporučamo sljedeće proizvode:</h1>
+
+
+    <div class="product-container">
+
+    <div class="product-card" v-for="product in productsToShow">
+      <img v-bind:src="'../img/' + product.img" alt="">
+      <h3>{{ product.displayName }}</h3>
+      <div class="answers-containers">
+        <span class="selected"></span>
+        <span class="correct"></span>
+      </div> 
+      <button class="button button-primary small" v-bind:href="product.url">O proizvodu</button>  
+    </div>
+
+  </div>
+
+
+  <div class="button-container">
+    <button class="button button-primary" href="#" v-on:click="showStores">Gdje kupiti</button> 
+  </div>
+
+  </div>
+
+</div>
+
+<div class="store-modal">
+
+  <div class="outer">
+  
+
+    <div class="close-btn" v-on:click="closeModal('store-modal')">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="store-container">
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/corner.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>  
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/eljekarna24.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>  
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/farmacia.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/Feller_web_lukacin.png" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/Feller_web_ljekarnaonline.png" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+  </div>
+
+</div>
+  
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="/js/quiz-app.js"></script>
+
+</body>
+</html>

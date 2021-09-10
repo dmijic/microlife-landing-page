@@ -303,7 +303,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
@@ -336,10 +336,9 @@ input[type="button"].button-primary {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   display: inline-block;
-  position: absolute;
 }
 .button.button-primary:hover,
 button.button-primary:hover,
