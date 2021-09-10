@@ -21,9 +21,9 @@ img {
   margin-bottom: 1.2rem;
 }
 
-/* Intro
+/* quiz
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.intro {
+.quiz {
 }
 
 /* Posts
@@ -48,7 +48,7 @@ img {
   max-width: 600px;
 }
 #posts .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
   z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

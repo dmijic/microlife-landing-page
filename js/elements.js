@@ -35,17 +35,14 @@ function houstonWeHaveALiftOff() {
         } else if((whereAreOthers(productsSection) * -1) < screenHalfHeight){
             //fun facts section sticky scroll
             //console.log("fun facts");
-            introSection.classList.add("get-over-here");
 
         } else if((whereAreOthers(introSection) * -1) < screenHalfHeight){
             //help section sticky scroll
             //console.log("help");
-            introSection.classList.remove("get-over-here");
 
         } else if((whereAreOthers(funFactsSection) * -1) < screenHalfHeight){
             // categories section sticky scroll
             //console.log("categories");
-            introSection.classList.add("get-over-here");
 
         } else {
             // Hero section sticky scroll
