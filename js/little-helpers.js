@@ -13,11 +13,23 @@ function whereAreOthers(other) {
 }
 
 function startQuiz() {
-    console.log("Quiz started");
     document.getElementById("quiz-modal").classList.add("show");
   }
   
   function closeQuiz() {
-    console.log("Quiz closed");
     document.getElementById("quiz-modal").classList.remove("show");
+  }
+
+  function closeModal(id) {
+    let modalToClose = document.getElementById(id);
+    let innerShownElements = modalToClose.querySelectorAll(".show");
+    modalToClose.classList.remove("show");
+    innerShownElements.forEach(element => {
+        element.classList.remove("show");
+    });
+  }
+
+  function openModal(id) {
+    let modalToOpen = document.getElementById(id);
+    modalToOpen.classList.add("show");
   }

@@ -17,15 +17,15 @@
 
   <div class="section hero" id="hero">
     <div class="container u-max-full-width">
-<div class="swiper-container">
+    <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="container-general">
             <div class="gallery-wrap wrap-effect-1">
-              <div class="swiper-item"></div>
-              <div class="swiper-item"></div>
-              <div class="swiper-item"></div>
-              <div class="swiper-item"></div>
+              <div class="swiper-item" id="post-1"></div>
+              <div class="swiper-item" id="post-2"></div>
+              <div class="swiper-item" id="post-3"></div>
+              <div class="swiper-item" id="post-4"></div>
             </div>
           </div>
         </div>
@@ -35,10 +35,19 @@
   </div>
 
   <div class="section posts" id="posts">
+
+    <div class="outer">
+    
+  
+      <div class="close-btn" onclick="closeModal('posts')">
+        <span></span>
+        <span></span>
+      </div>
+
     <div class="container">
       
       
-      <div class="row">
+      <div class="row" id="post-1-modal">
         <div class="card post">
           <h4 class="hero-heading">SVJETSKI DAN SRCA - 29.09.2021.</h4>
           <p>
@@ -57,7 +66,7 @@ Ključne poruke su:
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="post-2-modal">
         <div class="card post">
           <h4 class="hero-heading">DIJABETES I POVIŠENI KRVNI TLAK</h4>
           <p>
@@ -81,7 +90,7 @@ S vremenom obolijevanja nastaju promjene na velikim i malim arterijama, odnosno 
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="post-3-modal">
         <div class="card post">
           <h4 class="hero-heading">SEDAM SAVJETA ZA PRAVILNO MJERENJE TLAKA</h4>
           <p>
@@ -114,7 +123,7 @@ S vremenom obolijevanja nastaju promjene na velikim i malim arterijama, odnosno 
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="post-4-modal">
         <div class="card post">
           <h4 class="hero-heading">ZAŠTO MICROLIFE TLAKOMJERI - TLAKOMJERI NOVE GENERACIJE </h4>
           <p>
@@ -131,17 +140,59 @@ S vremenom obolijevanja nastaju promjene na velikim i malim arterijama, odnosno 
 
 
     </div>
+    </div>
   </div>
+
+
 
   <div class="section products" id="products">
     <div class="row">
       <h1>Tlakomjeri</h1>
 
+      <div class="product-card card">
+        <div class="five columns column img">
+          <img v-bind:src="productToShow.img" alt="">
+        </div>
+        <div class="seven columns column">
+          <h3>{{ productToShow.displayName }}</h3>
+          <p class="product-description">{{ productToShow.description }}</p>
+          <div class="feature-container">
+            <div class="feature" v-for="feature in productToShow.features">
+              <img v-bind:src="feature.icon" alt="">
+              <span>{{ feature.name }}</span>
+            </div>
+          </div>
+          <div class="feature-bar">
+            <div class="col" v-for="feature in productToShow.featureBar">
+              <img v-bind:src="feature.icon" alt="">
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="button button-primary small" v-bind:href="productToShow.url" target="_blank">Više o proizvodu</button>
+            <button class="button button-primary small" onclick="openModal('store-modal-main')">Gdje kupiti?</button>
+            </div> 
+        </div>
+
+      </div>
+
+      <div class="button-container">
+
+        <button class="prev-btn-prod">
+          &lt;
+        </button>
+  
+        <button class="next-btn-prod">
+          &gt;
+        </button>
+
+      </div>
+
 
     </div>
   </div>
 
-  <div class="section intro get-over-here" id="quiz">
+
+  <div class="section intro" id="quiz">
     <div class="container">
       <div class="row">
         <div class="one-half column">
@@ -337,12 +388,61 @@ S vremenom obolijevanja nastaju promjene na velikim i malim arterijama, odnosno 
 
 </div>
 
+<div class="store-modal-main" id="store-modal-main">
+  
+  <div class="outer">
+  
+
+    <div class="close-btn" onclick="closeModal('store-modal-main')">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="store-container">
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/corner.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>  
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/eljekarna24.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>  
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/farmacia.jpeg" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/Feller_web_lukacin.png" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+    <div class="store-card">
+      <h2>StoreName</h2>
+      <img src="./img/stores/Feller_web_ljekarnaonline.png" alt="">
+      <button class="button button-primary small" href="#">Webshop</button>
+    </div>
+
+  </div>
+
+</div>
+  
+
+</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/elements.js"></script>
   <script src="/js/fun-facts.js"></script>
-  <script src="/js/posts.js"></script>
   <script src="/js/quiz.js"></script>
+  <script src="/js/devices-slider.js"></script>
   <script src="/js/little-helpers.js"></script>
   <script src="/js/quiz-app.js"></script>
 
