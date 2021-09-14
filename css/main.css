@@ -871,13 +871,19 @@ h1.main {
     position: initial;
   }
   .result .product-container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr !important;
   }
   .result .product-container .product-card {
     max-height: 20vh;
   }
+  .result .product-container .product-card h3 {
+    margin-bottom: 1rem;
+  }
   .result .product-container .product-card img {
     max-height: 100px;
+  }
+  .result h1 {
+    font-size: 2.4rem;
   }
   .store-modal .outer,
   .store-modal-main .outer {
@@ -891,10 +897,12 @@ h1.main {
   }
   .store-modal .store-container .store-card,
   .store-modal-main .store-container .store-card {
-    max-height: 15vh;
+    min-height: 18vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   .store-modal .store-container .store-card img,
   .store-modal-main .store-container .store-card img {
