@@ -2,7 +2,7 @@ new Vue({
     el: '#products',
     data() {
       return {
-          products: [
+          productList: [
             {
               name: 'A1 Easy',
               displayName: 'BP A1 EASY',
@@ -407,43 +407,50 @@ new Vue({
     },
     mounted() {
 
-      this.productToShow = this.products[0];
-      this.products.forEach(element => {
+      this.productToShow = this.productList[0];
+      this.productList.forEach(element => {
       });
       
       var nextBtnProd = this.$el.querySelector('.next-btn-prod'),
-          prevBtnProd = this.$el.querySelector('.prev-btn-prod');
+          prevBtnProd = this.$el.querySelector('.prev-btn-prod'),
+          productCard = this.$el.querySelector('.product-card');
             
       nextBtnProd.addEventListener('click', () => {
-        if(this.counter < this.products.length-1){
-          nextBtnProd.disabled = false;
-          prevBtnProd.disabled = false;
+        if(this.counter < this.productList.length-1){
           this.counter++;
-          this.productToShow = this.products[this.counter];
         } else {
-          nextBtnProd.disabled = true;
+          this.counter = 0;
         }
+        this.productToShow = this.productList[this.counter];
       });
       prevBtnProd.addEventListener('click', () => {
         if(this.counter > 0){
-          prevBtnProd.disabled = false;
-          nextBtnProd.disabled = false;
           this.counter--;
-          this.productToShow = this.products[this.counter];
         } else {
-          prevBtnProd.disabled = true;
+          this.counter = this.productList.length-1;
         }
+        this.productToShow = this.productList[this.counter];
     });
-    }
+
+    productCard.addEventListener('swiped-left', function(e) {
+      console.log(this.productList);
+      if(this.counter < this.productList.length-1){
+        this.counter++;
+      } else {
+        this.counter = 0;
+      }
+      this.productToShow = this.productList[this.counter];
   });
 
-  
-  /* show one product enlarged
+  productCard.addEventListener('swiped-right', function(e) {
+      if(this.counter > 0){
+        this.counter--;
+      } else {
+        this.counter = this.productList.length-1;
+      }
+      this.productToShow = this.productList[this.counter];
+  });
 
-  if there is previous product show it to the left of the main product
 
-  if there is next product show it to the right of the main product
-
-  show prev and next buttons over the prev and next products if theres any
-
- */
+    }
+  });

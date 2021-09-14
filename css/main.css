@@ -5,6 +5,14 @@ img {
   width: auto;
 }
 
+body > * {
+  overflow-x: hidden;
+}
+
+body.noScroll {
+  overflow-x: hidden;
+}
+
 /* Sections
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -367,23 +375,6 @@ img {
   text-align: left;
 }
 
-/* Help
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
-  border-bottom: 1px solid #ddd;
-}
-
-/* Categories
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-  background-image: url("../img/stock-photo-beautiful-woman-after-the-exercise-making-a-hearth-shape-330953915.jpeg");
-  background-size: cover;
-  color: #fff;
-}
-.categories .section-description {
-  margin-bottom: 4rem;
-}
-
 /* Bigger than 550 */
 @media (min-width: 550px) {
 }
@@ -453,16 +444,16 @@ img {
   flex: 7;
 }
 .wrap-effect-1 .swiper-item:first-of-type {
-  background-image: url("../img/srce.jpeg");
+  background-image: url("../img/srce.jpg");
 }
 .wrap-effect-1 .swiper-item:nth-of-type(2) {
-  background-image: url("../img/dijabetes.jpeg");
+  background-image: url("../img/dijabetes.jpg");
 }
 .wrap-effect-1 .swiper-item:nth-of-type(3) {
-  background-image: url("../img/pravila.jpeg");
+  background-image: url("../img/pravila.jpg");
 }
 .wrap-effect-1 .swiper-item:nth-of-type(4) {
-  background-image: url("../img/tlakomjer.jpeg");
+  background-image: url("../img/tlakomjer.jpg");
 }
 .inspire {
   border: 1px solid rgba(22, 76, 167, 0.6);
@@ -573,6 +564,8 @@ img {
   font-size: 2rem;
   color: #53565a;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   margin: 5px;
   padding: 50px 25px;
   border-radius: 5px;
@@ -595,7 +588,7 @@ img {
 .store-modal .store-container .store-card img,
 .store-modal-main .store-container .store-card img {
   max-width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .store-modal.show,
@@ -904,11 +897,15 @@ h1.main {
     align-items: center;
     justify-content: space-between;
   }
+  .store-modal .store-container .store-card h2,
+  .store-modal-main .store-container .store-card h2 {
+    margin-bottom: 0;
+  }
   .store-modal .store-container .store-card img,
   .store-modal-main .store-container .store-card img {
-    max-width: 40px;
+    max-width: 60px;
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .store-modal .outer .close-btn span,
   .store-modal-main .outer .close-btn span {
