@@ -7,15 +7,15 @@ new Vue({
               question: 'Vaša dobna grupa',
               answers: [
                 {
-                  text: '12-45 godina',
+                  text: '12 - 45 godina',
                   value: 'next'
                 },
                 {
-                  text: '45-55 godina',
+                  text: '45 - 55 godina',
                   value: 'next'
                 },
                 {
-                  text: '55-80+ godina',
+                  text: '55 - 80+ godina',
                   value: 'group2'
                 }
               ],
@@ -87,6 +87,7 @@ new Vue({
               displayName: 'BP A1 EASY',
               img: 'products/a1-easy.png',
               url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy',
+              index: 0,
               features: [
                 {
                   neme: 'IHB',
@@ -108,6 +109,7 @@ new Vue({
                 displayName: 'BP A2 BASIC',
                 img: 'products/a2-basic.png',
                 url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-basic',
+                index: 1,
                 features: [
                   {
                     neme: 'IHB',
@@ -129,6 +131,7 @@ new Vue({
                   displayName: 'BP A2 CLASSIC',
                   img: 'products/a2-classic.png',
                   url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-classic',
+                  index: 2,
                   features: [
                     {
                       neme: 'IHB',
@@ -150,6 +153,7 @@ new Vue({
                     displayName: 'BP A3 PLUS',
                     img: 'products/a3-plus.png',
                     url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a3-plus',
+                    index: 3,
                     features: [
                       {
                         neme: '3 MAM',
@@ -171,6 +175,7 @@ new Vue({
                       displayName: 'BP A6 PC',
                       img: 'products/a6-pc.png',
                       url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a6-pc',
+                      index: 4,
                       features: [
                         {
                           neme: 'AFIB sens',
@@ -208,6 +213,7 @@ new Vue({
                         displayName: 'BP A150 AFIB',
                         img: 'products/a150-afib.png',
                         url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a150-afib',
+                        index: 5,
                         features: [
                           {
                             neme: 'AFIB sens',
@@ -233,6 +239,7 @@ new Vue({
                           displayName: 'BP A3 PLUS',
                           img: 'products/a3-plus.png',
                           url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a3-plus',
+                          index: 3,
                           features: [
                             {
                               neme: '3 MAM',
@@ -254,6 +261,7 @@ new Vue({
                             displayName: 'BP B3 AFIB',
                             img: 'products/b3-afib.png',
                             url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-b3-afib',
+                            index: 6,
                             features: [
                               {
                                 neme: 'AFIB sens',
@@ -314,16 +322,49 @@ new Vue({
       closeModal: function (whichModal) {
         let targetModal = this.$el.querySelector( `.${whichModal}`);
         targetModal.classList.remove('show');
+      },
+      goToProduct: function (index) {
+        sharedIndex.index = index;
+        console.log(sharedIndex.index + " from goToProduct function in quiz");
+        this.closeAll();
+      },
+      closeAll: function () {
+        document.querySelectorAll(".show").forEach(element => {
+          element.classList.remove("show");
+        });
+        document.querySelectorAll(".full").forEach(element => {
+          element.classList.remove("full");
+        });
+        document.querySelectorAll(".noScroll").forEach(element => {
+          element.classList.remove("noScroll");
+        });
+        this.$el.querySelector('.result').classList.remove('show');
+        this.$el.querySelector('.question').classList.remove('blur');
+        this.showWrongQuestion = false;
+        this.wrongQuestions = [];
+        this.temp = [];
+        this.currentQuestion = 0;
+        this.answered = 0;
+        this.wrongAnswers = 0;
+        this.correctAnswers = 0;
+        this.showGroup = 'next';
+        this.productsToShow = []
       }
     },
+    sharedIndex,
     mounted() {
+
+      console.log(sharedIndex.index + " from quiz");
+
       
       var nextBtn = this.$el.querySelector('.next-btn'),
           answers = this.$el.querySelectorAll('.answers span'),
           questionsLength = this.questions.length,
           result = this.$el.querySelector('.result'),
+          quizModal = document.querySelector('#quiz-modal'),
           question = this.$el.querySelector('.question'),
-          closeResult = this.$el.querySelector('.result .close-btn');
+          closeResult = this.$el.querySelector('.result .close-btn'),
+          closeQuiz = document.querySelector('#closeModalBtn');
             
       nextBtn.addEventListener('click', () => {
 
@@ -350,10 +391,26 @@ new Vue({
               nextBtn.setAttribute('disabled', '');
           }
       });
-      
-        closeResult.addEventListener('click', () => {
+        
+      closeResult.addEventListener('click', () => {
         result.classList.remove('show');
         question.classList.remove('blur');
+        this.showWrongQuestion = false;
+        this.wrongQuestions = [];
+        this.temp = [];
+        this.currentQuestion = 0;
+        this.answered = 0;
+        this.wrongAnswers = 0;
+        this.correctAnswers = 0;
+        this.showGroup = 'next';
+        this.productsToShow = []
+      });
+
+      closeQuiz.addEventListener('click', () => {
+        result.classList.remove('show');
+        question.classList.remove('blur');
+        quizModal.classList.remove('show');
+        document.querySelector("body").classList.remove("noScroll");
         this.showWrongQuestion = false;
         this.wrongQuestions = [];
         this.temp = [];

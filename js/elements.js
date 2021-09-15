@@ -17,14 +17,17 @@ function houstonWeHaveALiftOff() {
  */
 
     heroSection.addEventListener("click", (e) => {
-        console.log(e.target.getAttribute('id'));
-        let id = e.target.getAttribute('id');
+        let clickedElement = e.target;
+        while (!clickedElement.hasAttribute('id')) {
+            clickedElement = clickedElement.parentElement;
+        }
+            let id = clickedElement.getAttribute('id');
+        clickedElement.classList.add("full");
         postsSection.classList.add("show");
-        console.log("#"+id+"-modal");
-        console.log(document.getElementById(id+"-modal"));
         document.getElementById(id+"-modal").classList.add("show");
+        document.querySelector("body").classList.add("noScroll");
+        
     })
-
 
 /*     window.addEventListener("scroll", () => {
 

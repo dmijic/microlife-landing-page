@@ -14,22 +14,43 @@ function whereAreOthers(other) {
 
 function startQuiz() {
     document.getElementById("quiz-modal").classList.add("show");
-  }
-  
-  function closeQuiz() {
-    document.getElementById("quiz-modal").classList.remove("show");
+    document.querySelector("body").classList.add("noScroll");
   }
 
-  function closeModal(id) {
+function closeModal(id) {
     let modalToClose = document.getElementById(id);
     let innerShownElements = modalToClose.querySelectorAll(".show");
+    document.querySelector("body").classList.remove("noScroll");
     modalToClose.classList.remove("show");
     innerShownElements.forEach(element => {
         element.classList.remove("show");
     });
+    document.querySelectorAll(".full").forEach(element => {
+        element.classList.remove("full");
+    })
   }
 
-  function openModal(id) {
+function openModal(id) {
     let modalToOpen = document.getElementById(id);
     modalToOpen.classList.add("show");
+    document.querySelector("body").classList.add("noScroll");
   }
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.key === "Escape") {
+        document.querySelectorAll(".show").forEach(element => {
+            element.classList.remove("show");
+        });
+        document.querySelectorAll(".full").forEach(element => {
+            element.classList.remove("full");
+        });
+        document.querySelectorAll(".noScroll").forEach(element => {
+            element.classList.remove("noScroll");
+        });
+    }
+};
+
+const sharedIndex = {
+    index:null
+}
