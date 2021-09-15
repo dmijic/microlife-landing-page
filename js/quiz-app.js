@@ -325,7 +325,6 @@ new Vue({
       },
       goToProduct: function (index) {
         sharedIndex.index = index;
-        console.log(sharedIndex.index + " from goToProduct function in quiz");
         this.closeAll();
       },
       closeAll: function () {
@@ -353,9 +352,6 @@ new Vue({
     },
     sharedIndex,
     mounted() {
-
-      console.log(sharedIndex.index + " from quiz");
-
       
       var nextBtn = this.$el.querySelector('.next-btn'),
           answers = this.$el.querySelectorAll('.answers span'),

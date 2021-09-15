@@ -369,12 +369,19 @@ new Vue({
           this.productToShow = this.productList[this.counter];
       }); */
 
-      console.log(sharedIndex.index + " from slider");
+/*       goToProductBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+          console.log("hey hey")
+        })
+      }) */
+
 
       if(sharedIndex.index != null) {
+        this.productToShow = this.productList[sharedIndex.index];
         this.counter = sharedIndex.index;
         console.log("Index " + sharedIndex.index);
         console.log("Counter " + this.counter);
+        console.log(this.productList[sharedIndex.index]);
         sharedIndex.index = null;
       }
 
