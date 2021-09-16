@@ -84,10 +84,10 @@ new Vue({
             {
               name: 'A1 Easy',
               group: 'group1',
-              displayName: 'BP A1 EASY',
+              displayName: 'BP A1 Easy',
               img: 'products/a1-easy.png',
               url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy',
-              index: 0,
+              index: 6,
               features: [
                 {
                   neme: 'IHB',
@@ -106,10 +106,10 @@ new Vue({
               {
                 name: 'A2 Basic',
                 group: 'group1',
-                displayName: 'BP A2 BASIC',
+                displayName: 'BP A2 Basic',
                 img: 'products/a2-basic.png',
                 url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-basic',
-                index: 1,
+                index: 3,
                 features: [
                   {
                     neme: 'IHB',
@@ -128,10 +128,10 @@ new Vue({
                 {
                   name: 'A2 Classic',
                   group: 'group1',
-                  displayName: 'BP A2 CLASSIC',
+                  displayName: 'BP A2 Classic',
                   img: 'products/a2-classic.png',
                   url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-classic',
-                  index: 2,
+                  index: 5,
                   features: [
                     {
                       neme: 'IHB',
@@ -150,10 +150,10 @@ new Vue({
                   {
                     name: 'A3 Plus',
                     group: 'group1',
-                    displayName: 'BP A3 PLUS',
+                    displayName: 'BP A3 Plus',
                     img: 'products/a3-plus.png',
                     url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a3-plus',
-                    index: 3,
+                    index: 4,
                     features: [
                       {
                         neme: '3 MAM',
@@ -175,7 +175,7 @@ new Vue({
                       displayName: 'BP A6 PC',
                       img: 'products/a6-pc.png',
                       url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a6-pc',
-                      index: 4,
+                      index: 1,
                       features: [
                         {
                           neme: 'AFIB sens',
@@ -213,7 +213,7 @@ new Vue({
                         displayName: 'BP A150 AFIB',
                         img: 'products/a150-afib.png',
                         url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a150-afib',
-                        index: 5,
+                        index: 2,
                         features: [
                           {
                             neme: 'AFIB sens',
@@ -236,10 +236,10 @@ new Vue({
                         {
                           name: 'A3 Plus',
                           group: 'group2',
-                          displayName: 'BP A3 PLUS',
+                          displayName: 'BP A3 Plus',
                           img: 'products/a3-plus.png',
                           url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a3-plus',
-                          index: 3,
+                          index: 4,
                           features: [
                             {
                               neme: '3 MAM',
@@ -261,7 +261,7 @@ new Vue({
                             displayName: 'BP B3 AFIB',
                             img: 'products/b3-afib.png',
                             url: 'https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-b3-afib',
-                            index: 6,
+                            index: 0,
                             features: [
                               {
                                 neme: 'AFIB sens',
@@ -324,7 +324,8 @@ new Vue({
         targetModal.classList.remove('show');
       },
       goToProduct: function (index) {
-        sharedIndex.index = index;
+        myStorage = window.localStorage;
+        localStorage.setItem('showProductIndex', index);
         this.closeAll();
       },
       closeAll: function () {
@@ -350,7 +351,6 @@ new Vue({
         this.productsToShow = []
       }
     },
-    sharedIndex,
     mounted() {
       
       var nextBtn = this.$el.querySelector('.next-btn'),
@@ -361,32 +361,38 @@ new Vue({
           question = this.$el.querySelector('.question'),
           closeResult = this.$el.querySelector('.result .close-btn'),
           closeQuiz = document.querySelector('#closeModalBtn');
-            
-      nextBtn.addEventListener('click', () => {
 
-        this.answered < this.questions.length ? this.answered++ : '';
+         // answers.forEach(element => {
 
-        this.showGroup = this.questions[this.currentQuestion].answers[this.questions[this.currentQuestion].selected].value;
+          nextBtn.addEventListener('click', () => {
 
-          if(this.showGroup != 'next') {
-              this.products.forEach(product => {
-                  if(product.group === this.showGroup) {
-                    this.productsToShow.push(product);
-                  }
-              });
-              result.classList.add('show');
-              question.classList.add('blur');
-              answers.forEach(answer => {
-                answer.classList.contains('selected') ? answer.classList.remove('selected') : '';
+              this.answered < this.questions.length ? this.answered++ : '';
+      
+              this.showGroup = this.questions[this.currentQuestion].answers[this.questions[this.currentQuestion].selected].value;
+      
+                if(this.showGroup != 'next') {
+                    this.products.forEach(product => {
+                        if(product.group === this.showGroup) {
+                          this.productsToShow.push(product);
+                        }
+                    });
+                    result.classList.add('show');
+                    question.classList.add('blur');
+                    answers.forEach(answer => {
+                      answer.classList.contains('selected') ? answer.classList.remove('selected') : '';
+                  });
+                } else if (!nextBtn.hasAttribute('disabled') && this.currentQuestion < (questionsLength -1)) {
+                    this.currentQuestion++;
+                    answers.forEach(answer => {
+                        answer.classList.contains('selected') ? answer.classList.remove('selected') : '';
+                    });
+                    nextBtn.setAttribute('disabled', '');
+                }
             });
-          } else if (!nextBtn.hasAttribute('disabled') && this.currentQuestion < (questionsLength -1)) {
-              this.currentQuestion++;
-              answers.forEach(answer => {
-                  answer.classList.contains('selected') ? answer.classList.remove('selected') : '';
-              });
-              nextBtn.setAttribute('disabled', '');
-          }
-      });
+
+         // });
+            
+
         
       closeResult.addEventListener('click', () => {
         result.classList.remove('show');

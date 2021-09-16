@@ -151,7 +151,9 @@ mark {
  */
 
 small {
-  font-size: 80%;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #8c8c8c;
 }
 
 /**

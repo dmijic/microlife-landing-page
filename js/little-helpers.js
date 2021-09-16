@@ -50,7 +50,3 @@ document.onkeydown = function(evt) {
         });
     }
 };
-
-const sharedIndex = {
-    index: null
-}
