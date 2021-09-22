@@ -2,19 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Primary Meta Tags -->
   <title>❤️ SVJETSKI DAN SRCA ❤️ - 29.9.2021. - Microlife Hrvatska</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="title" content="❤️ SVJETSKI DAN SRCA ❤️  - 29.9.2021. - Microlife Hrvatska">
+  <meta name="description" content="Svjetski dan srca utemeljila je Svjetska kardiološka federacija 2000. godine. Osnovni cilj informirati je ljude širom svijeta o bolestima srca i moždanom udaru kao vodećim svjetskim uzrocima smrti.">
+  <meta name="author" content="Dario Mijić for Salvus d.o.o.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://mojtlakomjer.hr/">
+  <meta property="og:title" content="❤️ SVJETSKI DAN SRCA ❤️  - 29.9.2021. - Microlife Hrvatska">
+  <meta property="og:description" content="Svjetski dan srca utemeljila je Svjetska kardiološka federacija 2000. godine. Osnovni cilj informirati je ljude širom svijeta o bolestima srca i moždanom udaru kao vodećim svjetskim uzrocima smrti.">
+  <meta property="og:image" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//fonts.googleapis.com/css?family=Roboto:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
-
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD1JV4TB5X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RD1JV4TB5X');
+</script>
 </head>
 <body onload="animateTextOnScroll()">
-
   <div class="section hero" id="hero">
     <div class="container u-max-full-width">
     <div class="swiper-container">
@@ -53,7 +67,6 @@
     </div>
         </div>
   </div>
-
   <div class="section posts" id="posts">
 
     <div class="outer">
@@ -166,23 +179,17 @@ Ključne poruke su:
     </div>
     </div>
   </div>
-
   <div class="section discount" id="discount">
-
     <div class="row">
       <h3>15 % popusta na Microlife tlakomjere</h3>
       <p>I ovoga rujna, povodom <strong>Svjetskog dana srca</strong>, Microlife podsjeća na <strong>važnost preventivnog djelovanja</strong> u borbi protiv kardiovaskularnih bolesti u vidu <strong>redovite kontrole krvnog tlaka</strong>.<br><br><strong>Mislite na svoje srce!</strong><br> Ostvarite <strong>15 % popusta</strong> na sve Microlife tlakomjere u akciji koja traje <strong>do kraja rujna 2021.</strong> u odabranim online ljekarnama.</p>
       <div class="button-containers"><button onclick="openModal('store-modal-main')" class="button button-primary ">Gdje kupiti?</button></div>
     </div>
-
-
   </div>
-
   <div class="section products" id="products">
     <div class="row">
-      <h1>Proizvodi</h1>
+      <h1 class="hero-heading">Proizvodi</h1>
     </div>
-
     <div class="row" id="product-card-top">
       <div class="product-card card">
         <div class="column img">
@@ -210,34 +217,26 @@ Ključne poruke su:
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="button-container" id="btnsSlideIn">
-
         <a href="#product-card-top">
         <button class="prev-btn-prod small">
           &lt;
         </button>
       </a>
-
         <div class="pagination-container">
           <span v-for="(product, index) in productList">
             <img v-bind:src="product.img" alt="" v-bind:class="index === productToShow.index ? 'selected' : '' ">
           </span>
         </div>
-
         <a href="#product-card-top">
         <button class="next-btn-prod small">
           &gt;
         </button>
       </a>
-
       </div>
     </div>
-
   </div>
-
-
   <div class="section intro" id="quiz">
     <div class="container">
       <div class="row">
@@ -251,9 +250,6 @@ Ključne poruke su:
       </div>
     </div>
   </div>
-
-
-
   <div class="section fun-facts" id="fun-facts">
     <div class="fullscreen-video-bg">
       <video loop muted autoplay class="fullscreen-video-bg__video">
@@ -316,6 +312,35 @@ Ključne poruke su:
     </ul>
   </div>
 
+  <footer class="footer">
+    <a href="https://www.microlife.hr/">
+        <img class="footer-logo" src="img/microlife-small-white.svg" alt="Microlife">
+    </a>
+    <ul class="footer-navigation">
+                    <li>
+                <a href="osnovne-informacije.html">
+                    Osnovne informacije
+                </a>
+            </li>
+                    <li>
+                <a href="pravila-o-koristenju-kolacica.html">
+                    Pravila o korištenju kolačića
+                </a>
+            </li>
+                    <li>
+                <a href="zastita-privatnosti.html">
+                    Zaštita privatnosti
+                </a>
+            </li>
+                    <li>
+                <a href="uvjeti-koristenja-i-pravne-napomene.html">
+                    Uvjeti korištenja i pravne napomene
+                </a>
+            </li>
+            </ul>
+</footer>
+
+
 
 
   <div class="quiz-modal" id="quiz-modal">
@@ -323,7 +348,6 @@ Ključne poruke su:
       <span></span>
       <span></span>
     </div>
-
 <div id="quiz-app" class="quiz-background">
   <div class="user-role">
       <div class="question current">
@@ -339,23 +363,16 @@ Ključne poruke su:
            <button class="next-btn button button-primary" disabled>{{ currentQuestion < (questions.length -1) ? 'Dalje' : 'Procijeniti' }}</button>      
          </div>
       </div>
-    
     <div class="result">
-  
       <div class="outer">
-  
         <div class="button-container close">
         <div class="close-btn">
           <span></span>
           <span></span>
         </div>
       </div>
-      
       <h1>Preporučamo sljedeće proizvode:</h1>
-  
-  
       <div class="product-container">
-  
       <div class="product-card" v-for="product in productsToShow">
         <img v-bind:src="'../img/' + product.img" alt="">
         <h3>{{ product.displayName }}</h3>
@@ -363,132 +380,89 @@ Ključne poruke su:
         <button class="button button-primary small about-product" v-on:click="goToProduct(product.index)">O proizvodu</button></a>
       </div>
       <div class="spacer-20"></div>
-  
     </div>
-  
-  
     <div class="button-container">
       <button class="button button-primary small" href="#" v-on:click="showStores">Gdje kupiti</button> 
     </div>
-  
     </div>
-  
   </div>
-  
   <div class="store-modal">
-  
     <div class="outer">
-    
-  
       <div class="close-btn" v-on:click="closeModal('store-modal')">
         <span></span>
         <span></span>
       </div>
-
       <h3>Odaberite ljekarnu</h3>
-  
       <div class="store-container">
-  
         <a href="https://mojaljekarna.hr/brand/206-microlife" target="_blank">
           <div class="store-card">
             <img src="./img/stores/corner.png" alt="">
           </div>
         </a>
-      
           <a href="https://eljekarna24.hr/proizvodi/?search_q=microlife" target="_blank">
           <div class="store-card">
             <img src="./img/stores/eljekarna24.png" alt="">
           </div>
         </a>
-      
           <a href="https://www.farmacia.hr/brandovi/microlife/?cat=308" target="_blank">
           <div class="store-card">
             <img src="./img/stores/farmacia.png" alt="">
           </div>
         </a>
-      
           <a href="https://apoteka.hr/pages/search-results-page?q=microlife" target="_blank">
           <div class="store-card">
             <img src="./img/stores/Feller_web_lukacin.png" alt="">
           </div>
         </a>
-      
           <a href="https://ljekarnaonline.hr/proizvodi/?search_q=microlife" target="_blank">
           <div class="store-card">
             <img src="./img/stores/Feller_web_ljekarnaonline.png" alt="">
           </div>
         </a>
-
       <div class="spacer-20"></div>
-  
     </div>
-  
   </div>
-    
-  
   </div>
-  
-  
-  
   </div>
-  
   </div>
-
 </div>
-
 <div class="store-modal-main" id="store-modal-main">
-  
   <div class="outer">
-  
-
     <div class="close-btn" onclick="closeModal('store-modal-main')">
       <span></span>
       <span></span>
     </div>
-
     <h3>Odaberite ljekarnu</h3>
-
     <div class="store-container">
-
       <a href="https://mojaljekarna.hr/brand/206-microlife" target="_blank">
     <div class="store-card">
       <img src="./img/stores/corner.png" alt="">
     </div>
   </a>
-
     <a href="https://eljekarna24.hr/proizvodi/?search_q=microlife" target="_blank">
     <div class="store-card">
       <img src="./img/stores/eljekarna24.png" alt="">
     </div>
   </a>
-
     <a href="https://www.farmacia.hr/brandovi/microlife/?cat=308" target="_blank">
     <div class="store-card">
       <img src="./img/stores/farmacia.png" alt="">
     </div>
   </a>
-
     <a href="https://apoteka.hr/pages/search-results-page?q=microlife" target="_blank">
     <div class="store-card">
       <img src="./img/stores/Feller_web_lukacin.png" alt="">
     </div>
   </a>
-
     <a href="https://ljekarnaonline.hr/proizvodi/?search_q=microlife" target="_blank">
     <div class="store-card">
       <img src="./img/stores/Feller_web_ljekarnaonline.png" alt="">
     </div>
   </a>
-
     <div class="spacer-20"></div>
-
   </div>
-
 </div>
-  
-
 </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
   <script src="/js/little-helpers.js"></script>
   <script src="/js/btns-slide-in.js"></script>
@@ -498,7 +472,5 @@ Ključne poruke su:
   <script src="/js/main.js"></script>
   <script src="/js/quiz-app.js"></script>
   <script src="/js/quiz.js"></script>
-  <script src="/js/swipe-events.js"></script>
-
 </body>
 </html>
