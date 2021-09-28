@@ -1145,3 +1145,108 @@ button.small {
     margin-bottom: 20px;
   }
 }
+.floater {
+  background-color: #fff;
+  color: #53565a;
+  font-size: 1.75rem;
+  z-index: 2000;
+  text-align: left;
+  width: 50vw;
+  position: fixed;
+  bottom: 60px;
+  right: -500rem;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  -moz-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.floater-p {
+  margin: 1.6rem !important;
+}
+
+.floater-slide-in {
+  right: 2rem !important;
+}
+
+.floater-close {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.floater-close:hover {
+  transform: rotate(360deg);
+}
+.floater-close:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 0;
+  border-top: 3px solid #53565a;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.floater-close:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 0;
+  border-top: 3px solid #53565a;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.floater-content {
+  max-width: 90%;
+  display: inline-block;
+}
+.floater-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .floater p {
+    margin-top: 2.6rem !important;
+    margin-bottom: 2.6rem !important;
+  }
+
+  .floater {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: -400px;
+    right: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  .floater-content {
+    width: 70%;
+  }
+  .floater-slide-in {
+    right: 0 !important;
+    bottom: 0;
+  }
+}

@@ -27,6 +27,14 @@
         gtag('js', new Date());
         gtag('config', 'G-RD1JV4TB5X');
       </script>
+      <script>
+        if( document.cookie.indexOf('chocolate-chip-cookie=') == -1) {
+          window['ga-disable-UA-206890401-2'] = true;
+        }
+        else  {  
+          window['ga-disable-UA-206890401-2'] = false;
+        }
+      </script>
       </head>
 <body>
 
@@ -89,6 +97,17 @@ Fax +385 49 326 559</p>
                 </li>
                 </ul>
     </footer>
+    <div class="floater" id="cookie-floater">
+        <div class="floater-content">	
+            <p>Ova stranica koristi se kolačićima kako bi se osiguralo bolje korisničko iskustvo i funkcionalnost stranice. Nastavkom pregleda mrežne stranice slažete se s korištenjem kolačića.
+      </p>
+      
+        </div>
+      <span class="floater-close" id="floaterClose" onclick="closeFloater()"></span>
+      <button class="button button-primary small" onclick="eatYourCookies()">Prihvaćam</button>
+      <a class="button button-primary small" href="pravila-o-koristenju-kolacica.html">Postavke</a>
+      </div>
+      <script src="/js/little-helpers.js"></script>
     
 </body>
 </html>
