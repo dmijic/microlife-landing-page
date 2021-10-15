@@ -49,25 +49,25 @@
               <div class="swiper-item" id="post-1">
                 <div class="swiper-inner-container">
                   <h1 class="hero-heading">SVJETSKI DAN SRCA - 29.9.2021.</h1>
-                <button target="_blank" class="button button-primary small" href="https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy">Pročitajte više</button>
+                <button target="_blank" class="button button-primary small" >Pročitajte više</button>
                 </div>
               </div>
               <div class="swiper-item" id="post-2">
                 <div class="swiper-inner-container">
                   <h1 class="hero-heading">DIJABETES I POVIŠENI KRVNI TLAK</h1>
-                <button target="_blank" class="button button-primary small" href="https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy">Pročitajte više</button>
+                <button target="_blank" class="button button-primary small" >Pročitajte više</button>
                 </div>
               </div>
               <div class="swiper-item" id="post-3">
                 <div class="swiper-inner-container">
                   <h1 class="hero-heading">SEDAM SAVJETA ZA PRAVILNO MJERENJE TLAKA</h1>
-                <button target="_blank" class="button button-primary small" href="https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy">Pročitajte više</button>
+                <button target="_blank" class="button button-primary small" >Pročitajte više</button>
                 </div>
               </div>
               <div class="swiper-item" id="post-4">
                 <div class="swiper-inner-container">
                   <h1 class="hero-heading">ZAŠTO MICROLIFE TLAKOMJERI?</h1>
-                <button target="_blank" class="button button-primary small" href="https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy">Pročitajte više</button>
+                <button target="_blank" class="button button-primary small" >Pročitajte više</button>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ Ključne poruke su:
 
  
 
-<sup>1</sup> MAM tehnologija omogućuje brzu i preciznu karakterizaciju krvnog tlaka jednaku ponovljenim mjerenjima tijekom 90 minuta.     
+<br><br><small><sup>1</sup> MAM tehnologija omogućuje brzu i preciznu karakterizaciju krvnog tlaka jednaku ponovljenim mjerenjima tijekom 90 minuta.</small>
           </p>
           </div>
         </div>
@@ -191,9 +191,10 @@ Ključne poruke su:
   </div>
   <div class="section discount" id="discount">
     <div class="row">
-      <h3>15 % popusta na Microlife tlakomjere</h3>
-      <p>I ovoga rujna, povodom <strong>Svjetskog dana srca</strong>, Microlife podsjeća na <strong>važnost preventivnog djelovanja</strong> u borbi protiv kardiovaskularnih bolesti u vidu <strong>redovite kontrole krvnog tlaka</strong>.<br><br><strong>Mislite na svoje srce!</strong><br> Ostvarite <strong>15 % popusta</strong> na sve Microlife tlakomjere u akciji koja traje <strong>do kraja rujna 2021.</strong> u odabranim online ljekarnama.</p>
-      <div class="button-containers"><button onclick="openModal('store-modal-main')" class="button button-primary ">Gdje kupiti?</button></div>
+      <h3>POPUST 25 % NA SVE MICROLIFE TLAKOMJERE</h3>
+      <p>Ne propustite iskoristiti 25 % popusta na sve Microlife tlakomjere u razdoblju 15. - 18. 10.!
+        <br>Samo za ONLINE NARUDŽBE u odabranim webshopovima.</p>
+      <div class="button-containers"><a href="https://mojaljekarna.hr/255-tlakomjeri?brand=microlife&utm_source=landing_page&utm_medium=discount&utm_campaign=mojtlakomjer_listopad" target="_blank"><button class="button button-primary">Kupite odmah</button></a></div>
     </div>
   </div>
   <div class="section products" id="products">
@@ -222,7 +223,7 @@ Ključne poruke su:
             </div>
           </div>
           <div class="button-container">
-            <button class="button button-primary small" onclick="openModal('store-modal-main')">Gdje kupiti?</button>
+            <a :href="productToShow.url" target="_blank"><button class="button button-primary">Kupite</button></a>
             </div> 
         </div>
       </div>
@@ -383,13 +384,10 @@ Ključne poruke su:
       <div class="product-card" v-for="product in productsToShow">
         <img v-bind:src="'../img/' + product.img" alt="">
         <h3>{{ product.displayName }}</h3>
-        <a href="#product-card-top">
-        <button class="button button-primary small about-product" v-on:click="goToProduct(product.index)">O proizvodu</button></a>
+        <a :href="product.url" target="_blank">
+        <button class="button button-primary small about-product">Kupite odmah</button></a>
       </div>
       <div class="spacer-20"></div>
-    </div>
-    <div class="button-container">
-      <button class="button button-primary small" href="#" v-on:click="showStores">Gdje kupiti</button> 
     </div>
     </div>
   </div>
@@ -480,14 +478,14 @@ Ključne poruke su:
 <button class="button button-primary small" onclick="eatYourCookies()">Prihvaćam</button>
 <a class="button button-secondary small" href="pravila-o-koristenju-kolacica.html">Postavke</a>
 </div>
-  <script src="/js/vue.min.js"></script>
-  <script src="/js/little-helpers.js"></script>
-  <script src="/js/btns-slide-in.js"></script>
-  <script src="/js/devices-slider.js"></script>
-  <script src="/js/elements.js"></script>
-  <script src="/js/fun-facts.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/quiz-app.js"></script>
-  <script src="/js/quiz.js"></script>
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/little-helpers.js"></script>
+  <script src="./js/btns-slide-in.js"></script>
+  <script src="./js/devices-slider.js"></script>
+  <script src="./js/elements.js"></script>
+  <script src="./js/fun-facts.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/quiz-app.js"></script>
+  <script src="./js/quiz.js"></script>
 </body>
 </html>

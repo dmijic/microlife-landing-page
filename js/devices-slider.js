@@ -5,7 +5,7 @@ new Vue({
             name: "B3 AFIB",
             displayName: "BP B3 AFIB",
             img: "img/products/b3-afib.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-b3-afib",
+            url: "https://mojaljekarna.hr/tlakomjeri/11684-microlife-tlakomjer-bp-b3-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s AFIBsens, IHB i MAM tehnologijama. Podržava 99 memorija.",
             index: 0,
             features: [{
@@ -32,7 +32,7 @@ new Vue({
             name: "A6 PC",
             displayName: "BP A6 PC",
             img: "img/products/a6-pc.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a6-pc",
+            url: "https://mojaljekarna.hr/tlakomjeri/4663-microlife-tlakomjer-bp-a6-pc-za-nadlakticu-adapter-gratis.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s AFIBsens i MAM tehnologijama. Tvrda konusna manžeta, memorija za 2 korisnika te adapter u paketu.",
             index: 1,
             features: [{
@@ -71,7 +71,7 @@ new Vue({
             name: "A150 AFIB",
             displayName: "BP A150 AFIB",
             img: "img/products/a150-afib.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a150-afib",
+            url: "https://mojaljekarna.hr/tlakomjeri/8676-microlife-tlakomjer-bp-a-150-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s IHB i MAM tehnologijama. Podržava 30 memorija.",
             index: 2,
             features: [{
@@ -107,7 +107,7 @@ new Vue({
             name: "A2 Basic",
             displayName: "BP A2 Basic",
             img: "img/products/a2-basic.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-basic",
+            url: "https://mojaljekarna.hr/tlakomjeri/4665-microlife-tlakomjer-bp-a2-basic-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s IHB tehnologijom. Podržava 30 memorija.",
             index: 3,
             features: [{
@@ -140,7 +140,7 @@ new Vue({
             name: "A3 Plus",
             displayName: "BP A3 Plus",
             img: "img/products/a3-plus.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a3-plus",
+            url: "https://mojaljekarna.hr/tlakomjeri/4664-microlife-tlakomjer-bp-a3-plus-adapter-gratis.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s IHB i MAM tehnologijama. Memorija za 2 korisnika te adapter u paketu.",
             index: 4,
             features: [{
@@ -179,7 +179,7 @@ new Vue({
             name: "A2 Classic",
             displayName: "BP A2 Classic",
             img: "img/products/a2-classic.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a2-classic",
+            url: "https://mojaljekarna.hr/tlakomjeri/12067-microlife-tlakomjer-bp-b3-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s IHB tehnologijom. Podržava 30 memorija te adapter u paketu.",
             index: 5,
             features: [{
@@ -209,7 +209,7 @@ new Vue({
             name: "A1 Easy",
             displayName: "BP A1 Easy",
             img: "img/products/a1-easy.png",
-            url: "https://www.microlife.hr/proizvodi/krvni-tlak/automatski-nadlakticni-tlakomjeri/bp-a1-easy",
+            url: "https://mojaljekarna.hr/tlakomjeri/4666-microlife-tlakomjer-bp-a1-easy-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             description: "Tlakomjer s IHB tehnologijom. Najjednostavniji model, idealan kao putni tlakomjer.",
             index: 6,
             features: [{
