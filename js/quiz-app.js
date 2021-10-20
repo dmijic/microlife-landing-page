@@ -64,7 +64,7 @@ new Vue({
             group: "group1",
             displayName: "BP A1 Easy",
             img: "products/a1-easy.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/4666-microlife-tlakomjer-bp-a1-easy-za-nadlakticu.html?utm_source=landing_page&utm_medium=quiz&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a1-easy/?utm_source=landing_page&utm_medium=quiz&utm_campaign=mojtlakomjer_listopad",
             index: 6,
             features: [{
                 neme: "IHB",
@@ -81,7 +81,7 @@ new Vue({
             group: "group1",
             displayName: "BP A2 Basic",
             img: "products/a2-basic.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/4665-microlife-tlakomjer-bp-a2-basic-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a2-basic/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 3,
             features: [{
                 neme: "IHB",
@@ -98,7 +98,7 @@ new Vue({
             group: "group1",
             displayName: "BP A2 Classic",
             img: "products/a2-classic.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/12067-microlife-tlakomjer-bp-b3-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a2-classic/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 5,
             features: [{
                 neme: "IHB",
@@ -115,7 +115,7 @@ new Vue({
             group: "group1",
             displayName: "BP A3 Plus",
             img: "products/a3-plus.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/4664-microlife-tlakomjer-bp-a3-plus-adapter-gratis.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a3-mam-plus/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 4,
             features: [{
                 neme: "3 MAM",
@@ -132,7 +132,7 @@ new Vue({
             group: "group2",
             displayName: "BP A6 PC",
             img: "products/a6-pc.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/4663-microlife-tlakomjer-bp-a6-pc-za-nadlakticu-adapter-gratis.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a6-afib-pc-adapter/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 1,
             features: [{
                 neme: "AFIB sens",
@@ -161,7 +161,7 @@ new Vue({
             group: "group2",
             displayName: "BP A150 AFIB",
             img: "products/a150-afib.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/8676-microlife-tlakomjer-bp-a-150-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a150-afib/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 2,
             features: [{
                 neme: "AFIB sens",
@@ -181,7 +181,7 @@ new Vue({
             group: "group2",
             displayName: "BP A3 Plus",
             img: "products/a3-plus.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/4664-microlife-tlakomjer-bp-a3-plus-adapter-gratis.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-a3-mam-plus/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 4,
             features: [{
                 neme: "3 MAM",
@@ -198,7 +198,7 @@ new Vue({
             group: "group2",
             displayName: "BP B3 AFIB",
             img: "products/b3-afib.png",
-            url: "https://mojaljekarna.hr/tlakomjeri/11684-microlife-tlakomjer-bp-b3-afib-za-nadlakticu.html?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
+            url: "https://www.farmacia.hr/brandovi/microlife/microlife-tlakomjer-bp-b3-afib/?utm_source=landing_page&utm_medium=product&utm_campaign=mojtlakomjer_listopad",
             index: 0,
             features: [{
                 neme: "AFIB sens",
